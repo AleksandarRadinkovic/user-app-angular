@@ -1,1 +1,23 @@
-<p>login works!</p>
+<div class="container mt-5">
+  <div class="card" style="padding: 20px">
+    <h2 class="text-center">Please Log In!</h2>
+    <form>
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="E-Mail" />
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="password" />
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary" class="w-100">
+        Login
+      </button>
+    </form>
+    <a style="text-decoration: none; margin-top: 10px" routerLink="/signup"
+      >Already registered? Click to Login</a
+    >
+  </div>
+</div>
