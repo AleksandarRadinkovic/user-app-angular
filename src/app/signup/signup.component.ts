@@ -20,32 +20,8 @@ export class SignupComponent implements OnInit {
     this.signupForm = this.formBuilder.group({
       email: ['', Validators.required],
       name: ['', Validators.required],
-      password: ['', Validators.required],
-      confirmPassword: ['',Validators.required],
-      validators: this.controlValuesAreEqual('password', 'confirmPassword')
-    
+      password: ['', Validators.required]
     });
-  }
-  get passwordMatchError() {
-    return (
-        this.signupForm.getError('valuesDoNotMatch') &&
-        this.signupForm.get('confirmPassword')?.touched
-    );
-  }
-  private controlValuesAreEqual(controlNameA: string, controlNameB: string): ValidatorFn {
-    return (control: AbstractControl): ValidationErrors | null => {
-      const formGroup = control as FormGroup
-      const valueOfControlA = formGroup.get(controlNameA)?.value
-      const valueOfControlB = formGroup.get(controlNameB)?.value
-
-      if (valueOfControlA === valueOfControlB) {
-        return null
-      } else {
-        return { valuesDoNotMatch: true }
-      }
-
-
-    }
   }
   signUp() {
     this.http
