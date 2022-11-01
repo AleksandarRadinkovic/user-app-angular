@@ -3,7 +3,7 @@
     {
       "email": "adfad@gmail.com",
       "name": "aaa",
-      "password": "aaaaa",
+      "password": "1111",
       "id": 1
     },
     {
@@ -29,6 +29,19 @@
       "name": "aco",
       "password": "aco",
       "id": 5
+    },
+    {
+      "email": "test",
+      "name": "test@test.com",
+      "password": "test",
+      "id": 6
+    },
+    {
+      "email": "aa",
+      "name": "bb",
+      "password": "ad",
+      "confirmPassword": "adsdf",
+      "id": 7
     }
   ]
 }

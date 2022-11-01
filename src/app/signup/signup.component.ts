@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators, ValidatorFn, AbstractControl, ValidationErrors, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { of } from 'rxjs';
 
 @Component({
   selector: 'app-signup',
@@ -22,7 +21,31 @@ export class SignupComponent implements OnInit {
       email: ['', Validators.required],
       name: ['', Validators.required],
       password: ['', Validators.required],
+      confirmPassword: ['',Validators.required],
+      validators: this.controlValuesAreEqual('password', 'confirmPassword')
+    
     });
+  }
+  get passwordMatchError() {
+    return (
+        this.signupForm.getError('valuesDoNotMatch') &&
+        this.signupForm.get('confirmPassword')?.touched
+    );
+  }
+  private controlValuesAreEqual(controlNameA: string, controlNameB: string): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      const formGroup = control as FormGroup
+      const valueOfControlA = formGroup.get(controlNameA)?.value
+      const valueOfControlB = formGroup.get(controlNameB)?.value
+
+      if (valueOfControlA === valueOfControlB) {
+        return null
+      } else {
+        return { valuesDoNotMatch: true }
+      }
+
+
+    }
   }
   signUp() {
     this.http

@@ -1,4 +1,4 @@
-.mat-dialog-container {
-    width: 95% !important;
-    max-width: 500px !important;
+
+::ng-deep .cdk-overlay-pane {
+    width: 50% !important;
 }

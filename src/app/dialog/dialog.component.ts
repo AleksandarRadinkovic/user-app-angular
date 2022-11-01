@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ApiService } from '../services/api.service';
-import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { AbstractControl, UntypedFormBuilder, UntypedFormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -21,7 +21,7 @@ export class DialogComponent implements OnInit {
     this.userForm = this.formBuilder.group({
       email: [''],
       name: [''],
-      password: [''],
+      password: ['',Validators],
     });
     if (this.editData) {
       this.userForm.controls['email'].setValue(this.editData.email);
@@ -32,6 +32,7 @@ export class DialogComponent implements OnInit {
   saveUser() {
     this.api.updateUser(this.userForm.value, this.editData.id).subscribe({
       next: (res) => {
+        if(this.editData.password)
         alert('User updated Successfully');
         this.userForm.reset();
         this.dialogRef.close('update');

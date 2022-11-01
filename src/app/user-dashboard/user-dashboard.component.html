@@ -6,11 +6,11 @@
   >
     <mat-icon>supervised_user_circle</mat-icon>
   </button>
-  <span>Home</span>
-  <span>Products</span>
+  <span routerLink="/dashboard"><a>Home</a></span>
+  <span style="margin-left: 15px" routerLink="/charts"><a>Products</a></span>
   <span class="example-spacer"></span>
   <span class="example-spacer"></span>
-  <button mat-raised-button color="warn">Log Out</button>
+  <button mat-raised-button color="warn" (click)="logOut()">Log Out</button>
 </mat-toolbar>
 
 <div class="container">

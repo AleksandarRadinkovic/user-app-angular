@@ -29,7 +29,7 @@ export class UserDashboardComponent implements OnInit {
   }
   logOut() {
     localStorage.clear();
-    this.router.navigate(['dashboard']);
+    this.router.navigate(['login']);
   }
   getAllUsers() {
     this.api.getUser().subscribe({
