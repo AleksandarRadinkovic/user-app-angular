@@ -35,7 +35,13 @@ export class ChartsComponent implements OnInit {
       {
         data: [5, 55, 70, 33, 68],
         label: 'Products total',
-        backgroundColor: 'green',
+        backgroundColor: [
+          'red',
+          'blue',
+          'green',
+          'yellow',
+          'gray'
+        ]
       },
     ],
   };
