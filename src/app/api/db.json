@@ -1,34 +1,28 @@
 {
   "signupUsers": [
     {
-      "id": 1,
-      "email": "user",
-      "name": "aco",
-      "password": "user"
+      "email": "adfad@gmail.com",
+      "name": "aaa",
+      "password": "aaaaa",
+      "id": 1
     },
     {
-      "email": "a",
-      "name": "b",
-      "password": "c",
+      "email": "aco@aco.c",
+      "name": "Aleks",
+      "password": "1234",
       "id": 2
     },
     {
-      "email": "t",
+      "email": "tasdfasdf@gmail.com",
       "name": "a",
       "password": "b",
       "id": 3
     },
     {
-      "email": "a",
-      "name": "b",
-      "password": "a",
+      "email": "a@gmail.com",
+      "name": "dflsdfs",
+      "password": "aadaff",
       "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
     }
   ]
 }
