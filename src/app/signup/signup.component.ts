@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { of } from 'rxjs';
 
@@ -10,10 +10,10 @@ import { of } from 'rxjs';
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent implements OnInit {
-  public signupForm!: FormGroup;
+  public signupForm!: UntypedFormGroup;
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private http: HttpClient,
     private router: Router
   ) {}

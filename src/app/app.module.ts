@@ -19,6 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DialogComponent } from './dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NgChartsModule } from 'ng2-charts';
+import { ChartsComponent } from './charts/charts.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     SignupComponent,
     UserDashboardComponent,
     DialogComponent,
+    ChartsComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTableModule,
     MatSortModule,
     MatDialogModule,
+    NgChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
