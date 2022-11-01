@@ -1,12 +1,31 @@
 <div class="container">
   <div class="row">
     <div class="chart-wrapper">
+      <h2 style="margin-top: 20px">Sales Percent</h2>
       <canvas
         baseChart
         width="600"
         height="400"
         type="line"
         [data]="lineChartData"
+      >
+      </canvas>
+      <h2 style="margin-top: 20px">Sold Products</h2>
+      <canvas
+        baseChart
+        width="600"
+        height="400"
+        type="bar"
+        [data]="barChartData"
+      >
+      </canvas>
+      <h2 style="margin-top: 20px">Total Products</h2>
+      <canvas
+        baseChart
+        width="600"
+        height="400"
+        type="bar"
+        [data]="pieChartData"
       >
       </canvas>
     </div>
